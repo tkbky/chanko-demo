@@ -1,0 +1,11 @@
+h1 List of Users
+- @active_users.each do |user|
+  p Email: #{user.email}
+  p
+    = invoke(:user_deletion, :delete_link, user: user)
+
+h1 List of Inactive Users
+- @inactive_users.each do |user|
+  p Email: #{user.email}
+  p
+    = invoke(:user_recover, :recover_link, user: user)
